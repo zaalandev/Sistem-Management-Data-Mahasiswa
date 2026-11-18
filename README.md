@@ -1,11 +1,11 @@
 Sistem Management Data Mahasiswa
 
-Pembagian Tugas Masing Masing Anggota 
-
 Anggota Kelompok:
 - Zaalan Nayaka Putra Lanang
 - Mohammad Axel Linggar Alif Khan
 - Nabila Nuriza Riskianti
+
+Pembagian Tugas Masing Masing Anggota 
 
 Pembagian Tugas Anggota Kelompok:
 
@@ -17,3 +17,4 @@ Mohammad Axel Linggar Alif Khan
 -
 Nabila Nuriza Riskianti
 - Penyusun Proposal Laporan 
+- 
