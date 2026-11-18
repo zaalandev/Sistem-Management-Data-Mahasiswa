@@ -10,5 +10,10 @@ Anggota Kelompok:
 Pembagian Tugas Anggota Kelompok:
 
 Zaalan Nayaka Putra Lanang
+- 
+
+Mohammad Axel Linggar Alif Khan
 -
 
+Nabila Nuriza Riskianti
+-
