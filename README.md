@@ -10,10 +10,10 @@ Anggota Kelompok:
 Pembagian Tugas Anggota Kelompok:
 
 Zaalan Nayaka Putra Lanang
-- 
-
+- Penyusun Proposal Laporan 
+-
 Mohammad Axel Linggar Alif Khan
+- Penyusun Proposal Laporan 
 -
-
 Nabila Nuriza Riskianti
--
+- Penyusun Proposal Laporan 
