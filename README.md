@@ -11,7 +11,7 @@ Pembagian Tugas Anggota Kelompok:
 
 Zaalan Nayaka Putra Lanang
 - Penyusun Proposal Laporan 
-- Ngodingg
+- Ngoding
 
 Mohammad Axel Linggar Alif Khan
 - Penyusun Proposal Laporan 
