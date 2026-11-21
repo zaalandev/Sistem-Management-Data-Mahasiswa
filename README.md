@@ -1,9 +1,10 @@
 Sistem Management Data Mahasiswa
 
 Anggota Kelompok:
-- Zaalan Nayaka Putra Lanang
-- Mohammad Axel Linggar Alif Khan
-- Nabila Nuriza Riskianti
+- Zaalan Nayaka Putra Lanang (263140701111006)
+- Mohammad Axel Linggar Alif Khan (263140701111014)
+- Nabila Nuriza Riskianti (263140701111028)
+
 
 Pembagian Tugas Masing Masing Anggota 
 
