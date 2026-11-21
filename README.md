@@ -1,9 +1,10 @@
 Sistem Management Data Mahasiswa
 
 Anggota Kelompok:
-- Zaalan Nayaka Putra Lanang
-- Mohammad Axel Linggar Alif Khan
-- Nabila Nuriza Riskianti
+- Zaalan Nayaka Putra Lanang (263140701111006)
+- Mohammad Axel Linggar Alif Khan (263140701111014)
+- Nabila Nuriza Riskianti (263140701111028)
+
 
 Pembagian Tugas Masing Masing Anggota 
 
@@ -198,7 +199,7 @@ e.	Algoritma Delete (Menghapus Data)
 8.	Jika pengguna membatalkan, data mahasiswa tetap tersimpan.
 9.	Aplikasi menampilkan pesan sesuai tindakan pengguna.
 10.	Aplikasi kembali ke menu utama.
-                                                                                                                                        
+                             
 f.	Algoritma Search (Mencari Data)
 1.	Pengguna memilih menu Cari Mahasiswa.
 2.	Aplikasi meminta pengguna memasukkan NIM atau nama mahasiswa yang ingin dicari dan tidak membedakan huruf besar dan kecil serta pengguna dapat menggunakan filter program studi atau semester.
