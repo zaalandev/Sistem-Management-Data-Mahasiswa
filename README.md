@@ -39,12 +39,14 @@ Bersama
 5. Integrasi seluruh fitur CRUD.
 
 
+
+
+
 1.1 Deskripsi Masalah
 
 Latar Belakang Masalah
 
-Data mahasiswa merupakan informasi penting yang perlu dikelola dengan baik agar mudah ditemukan, diperbarui, dan dihapus sesuai kebutuhan. Dalam pengelolaan data mahasiswa secara manual, terdapat kemungkinan terjadinya kesalahan pencatatan, kesulitan  
-dalam mencari data tertentu, serta proses pembaruan informasi 
+Latar Belakang Masalah	Data mahasiswa merupakan informasi penting yang perlu dikelola dengan baik agar mudah ditemukan, diperbarui, dan dihapus sesuai kebutuhan. Dalam pengelolaan data mahasiswa secara manual, terdapat kemungkinan terjadinya kesalahan pencatatan, kesulitan dalam mencari data tertentu, serta proses pembaruan informasi 
 yang kurang efisien.
 
 Berdasarkan permasalahan tersebut, diperlukan sebuah aplikasi sederhana yang dapat membantu proses pengelolaan data mahasiswa. Aplikasi yang dikembangkan adalah Sistem 
@@ -55,7 +57,7 @@ database eksternal dan seluruh proses pengelolaan data dilakukan melalui menu ya
 
 Pengguna Sistem (User)
 
-1. Admin atau Pengelola Data : bertugas memasukkan, melihat, mengubah, menghapus, mengubah, dan mencari data mahasiswa.
+1. Admin atau Pengelola Data : bertugas memasukkan, melihat, mengubah, menghapus, dan mencari data mahasiswa.
 2. Mahasiswa : Data identitasnya dikelola melaui aplikasinya, tetapi tidak berinteraksi langsung dengan sistem.
 
 Data Input
@@ -82,6 +84,10 @@ Properti :
 -	Semester : number
 -	IPK : number
 
+
+
+
+
 1.2 Decomposition (Dekomposisi Masalah)
 
 1.Create
@@ -105,6 +111,10 @@ Memeriksa apakah input pengguna sudah sesuai dengan ketentuan.
 7.Menu Utama
 Menampilkan pilihan fitur dan mengarahkan pengguna ke proses yang dipilih.
 
+
+
+
+
 1.3 Pattern Recognition (Pengenalan Pola)
 
 1.	Pola Pengulangan Menu
@@ -114,7 +124,7 @@ Aplikasi menggunakan pola pengulangan untuk menampilkan menu utama secara terus-
 Setiap data yang dimasukkan pengguna perlu diperiksa terlebih dahulu sebelum diproses. Validasi dilakukan untuk memastikan data sesuai dengan ketentuan. Misalnya : Nim tidak boleh kosong, nama tidak boleh kosong, semester harus berupa angka, IPK harus berupa angka dengan rentang 0,00 sampai 4,00.
 
 3.	Pola Pencarian Data pada Array
-Pencarian dilakukan dengan memeriksa setiap elemen dalam array sampai data yang sesuai ditemukan. Misalnya: Ketika pengguna memasukkan NIM, aplikasi akan membandingkan NIm tersebut dengan setiap data mahasiswa yang tersimpan.
+Pencarian dilakukan dengan memeriksa setiap elemen dalam array sampai data yang sesuai ditemukan. Misalnya: Ketika pengguna memasukkan NIM, aplikasi akan membandingkan NIM tersebut dengan setiap data mahasiswa yang tersimpan.
 
 4.	Pola Pengelolaan Data
 Setiap data mahasiswa memiliki struktur property yang sama, yaitu NIM, nama, program studi, semester, dan IPK. Pola ini memudahkan  aplikasi dalam melakukan penambahan, penampilan, perubahan, dan penghapusan data.
@@ -122,47 +132,58 @@ Setiap data mahasiswa memiliki struktur property yang sama, yaitu NIM, nama, pro
 5.	Pola Pesan Sistem
 Setiap proses yang dilakukan  pengguna akan menghasilkan respons dari aplikasi. Misalnya: Data berhasil ditambahkan, Data berhasil diperbarui, Data berhasil dihapus, Data tidak ditemukan, Pilihan menu tidak valid.
 
+
+
+
+
 1.4 Abstraction (Abstraksi)
 
-Relevan
+1. Relevan
 
-NIM
-Nama mahasiswa
-Program studi
-Semester
-IPK
+- NIM
+- Nama mahasiswa
+- Program studi
+- Semester
+- IPK
 
-Tidak Relevan
+2. Tidak Relevan
 
-Alamat rumah
-Nomor telepon
-Hobi
-Foto mahasiswa
-Riwayat organisasi
+- Alamat rumah
+- Nomor telepon
+- Hobi
+- Foto mahasiswa
+- Riwayat organisasi
+
+
+
+
 
 1.5 Algorithmic Thinking (Berpikir Algoritmik)
 
-a.	Algoritma Menu Utama
+a. Algoritma Menu Utama
 1.	Memulai aplikasi.
 2.	Membuat array kosong untuk menyimpan data mahasiswa.
-3.	Menampilkan menu utama yang terdiri dari Tambah Mahasiswa, Tampilkan Mahasiswa, Ubah Data Mahasiswa, Hapus Mahasiswa, Cari Mahasiswa, dan Keluar.
-4.	Meminta pengguna memasukkan pilihan menu.
-5.	Memeriksa pilihan yang dimasukkan pengguna.
-6.	Jika pilihan sesuai, aplikasi menjalankan fitur yang dipiilih.
-7.	Jika pilihan tidak sesuai, aplikasi menampilkan pesan kesalahan.
-8.	Setelah proses selesai, aplikasi kembali menampilkan menu utama.
-9.	Jika pengguna memilih menu keluar, aplikasi menghentikan pengulangan dan menampilkan pesan bahwa program telah selesai.
+3.	Membuat variabel boolean isRunning dengan nilai true sebagai kondisi pengulangan menu.
+4.	Menampilkan menu utama selama isRunning bernilai true.
+5.	Meminta pengguna memasukkan pilihan menu.
+6.	Memeriksa pilihan yang dimasukkan pengguna.
+7.	Jika pilihan sesuai, aplikasi menjalankan fitur yang dipiilih.
+8.	Jika pilihan tidak sesuai, aplikasi menampilkan pesan kesalahan.
+9.	Jika pengguna memilih menu keluar, variabel isRunning diubah menjadi false.
+10.	Pengulangan berhenti dan aplikasi menampilkan pesan bahwa program telah selesai.
+
 
 b.	Algoritma Create (Menambahkan Data)
 1.	Pengguna memilih menu Tambah Mahasiswa.
 2.	Aplikasi meminta pengguna memasukkan NIM.
 3.	Aplikasi memeriksa apakah NIM sudah terdapat dalam array.
 4.	Jika NIM sudah digunakan, aplikasi menampilkan pesan bahwa NIM telah terdaftar.
-5.	Jika NIM belum digunakan, aplikasi meminta pengguna memasukkan nama, program studi, semester, dan IPK.
+5.	Jika NIM belum digunakan, aplikasi meminta pengguna memasukkan nama, program studi semester, dan IPK.
 6.	Aplikasi melakukan validasi terhadap seluruh input.
 7.	Jika data valid, aplikasi menyimpan data mahasiswa baru ke dalam array. 
 8.	Aplikasi menampilkan pesan bahwa data berhasil ditambahkan.
 9.	Aplikasi kembali ke menu utama.
+
 
 c.	Algoritma Read (Menampilkan Data)
 1.	Pengguna memilih menu Tampilkan Mahasiswa.
@@ -176,17 +197,19 @@ c.	Algoritma Read (Menampilkan Data)
 9.	Jika tidak ditemukan, aplikasi menampilkan pesan bahwa data tidak tesedia.
 10.	Setelah seluruh data ditampilkan, aplikasi kembali ke menu utama.
 
+
 d.	Algoritma Update (Mengubah Data)
 1.	Pengguna memilih menu Ubah Data Mahasiswa.
 2.	Aplikasi meminta pengguna memasukkan NIM mahasiswa yang ingin di ubah.
 3.	Aplikasi melakukan pencarian NIM di dalam array.
 4.	Jika NIM tidak ditemukan, aplikasi menampilkan pesan bahwa data mahasiswa tidak ditemukan.
 5.	Jika NIM ditemukan, aplikasi menampilkan data mahasiswa tersebut.
-6.	Aplikasi meminta pengguna memasukkan informasi baru yang ingi diperbarui.
+6.	Aplikasi meminta pengguna memasukkan informasi baru yang ingin diperbarui. Pengguna dapat mempertahankan informasi lama pada bagian yang tidak ingin diubah.
 7.	Aplikasi melakukan validasi terhadap data baru.
 8.	Jika data valid, aplikasi mengganti informasi lama dengan informasi baru. 
 9.	Aplikasi menampilkan pesan bahwa data berhasil diperbarui.
 10.	Aplikasi kembali ke menu utama.
+
 
 e.	Algoritma Delete (Menghapus Data)
 1.	Pengguna memilih menu Hapus Mahasiswa.
@@ -199,6 +222,7 @@ e.	Algoritma Delete (Menghapus Data)
 8.	Jika pengguna membatalkan, data mahasiswa tetap tersimpan.
 9.	Aplikasi menampilkan pesan sesuai tindakan pengguna.
 10.	Aplikasi kembali ke menu utama.
+
                              
 f.	Algoritma Search (Mencari Data)
 1.	Pengguna memilih menu Cari Mahasiswa.
@@ -208,3 +232,4 @@ f.	Algoritma Search (Mencari Data)
 5.	Jika data ditemukan, aplikasi menampilkan infromasi mahasiswa yang sesuai.
 6.	Jika data tidak ditemukan, aplikasi menampilkan pesan bahwa data mahasiswa tidak tersedia.
 7.	Setelah proses pencarian selesai, kembali ke menu utama.
+
