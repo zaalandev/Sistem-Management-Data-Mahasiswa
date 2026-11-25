@@ -107,3 +107,78 @@ function cariMahasiswa(data: Mahasiswa[]): void {
 
   console.log("[Cari Mahasiswa] Fitur ini akan dikerjakan pada Progress 6.");
 }
+
+
+
+
+// =====================================================================
+// BLOK 4 : MENU UTAMA 
+// =====================================================================
+
+// Fungsi menampilkan daftar menu (tanpa parameter, tanpa return / void)
+function tampilMenu(): void {
+  console.log("\n===== SISTEM MANAGEMENT DATA MAHASISWA =====");
+  console.log("1. Tambah Mahasiswa");
+  console.log("2. Tampilkan Mahasiswa");
+  console.log("3. Ubah Data Mahasiswa");
+  console.log("4. Hapus Mahasiswa");
+  console.log("5. Cari Mahasiswa");
+  console.log("0. Keluar");
+  console.log("============================================");
+}
+
+// Fungsi utama yang menjalankan aplikasi (tanpa parameter, void)
+function main(): void {
+  // Membuat array kosong untuk menyimpan data mahasiswa
+  const mahasiswa: Mahasiswa[] = [];
+
+  // Variabel boolean sebagai kondisi pengulangan menu, nilainya berubah sehingga memakai let
+  let isRunning: boolean = true;
+
+  // Perulangan while: menu terus tampil selama isRunning bernilai true
+  while (isRunning === true) {
+    // Menampilkan menu utama
+    tampilMenu();
+
+    // Meminta pengguna memasukkan pilihan menu
+    const pilihan: string = bacaInput("Masukkan pilihan menu: ");
+
+    // Memeriksa pilihan pengguna dengan switch
+    switch (pilihan) {
+      case "1":
+        // Menjalankan fitur Create
+        tambahMahasiswa(mahasiswa);
+        break;
+      case "2":
+        // Menjalankan fitur Read
+        tampilMahasiswa(mahasiswa);
+        break;
+      case "3":
+        // Menjalankan fitur Update
+        ubahMahasiswa(mahasiswa);
+        break;
+      case "4":
+        // Menjalankan fitur Delete
+        hapusMahasiswa(mahasiswa);
+        break;
+      case "5":
+        // Menjalankan fitur Search
+        cariMahasiswa(mahasiswa);
+        break;
+      case "0":
+        // Keluar: mengubah isRunning menjadi false agar perulangan berhenti
+        isRunning = false;
+        break;
+      default:
+        // Pilihan di luar menu ditangani dengan pesan kesalahan
+        console.log("Pilihan menu tidak valid. Silakan pilih 0 sampai 5.");
+        break;
+    }
+  }
+
+  // Setelah perulangan berhenti, tampilkan pesan program selesai
+  console.log("Program telah selesai. Terima kasih.");
+}
+
+// Memanggil fungsi utama untuk memulai aplikasi
+main();
